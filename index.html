@@ -14,6 +14,14 @@
 <body>
     <h1>Liste des pays</h1>
     <div id="main"></div>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/sw.js");
+            });
+        }
+    </script>
 </body>
 
 </html>
